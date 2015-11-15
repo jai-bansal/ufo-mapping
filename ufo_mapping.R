@@ -23,8 +23,8 @@ library(ggmap)
   # Get tables:
   # 'html_table' returns a list containing a data frame, so the data frame is extracted
   # using '[[1]]':
-  ufo_sightings_20 = html_table(xpath_20)[[1]]
-  ufo_sightings_21 = html_table(xpath_21)[[1]]
+  ufo_sightings_20 = html_table(xpath_20, fill = T)[[1]]
+  ufo_sightings_21 = html_table(xpath_21, fill = T)[[1]]
   
   # Combine tables:
   ufo_data = rbind(ufo_sightings_20, ufo_sightings_21)
@@ -52,6 +52,7 @@ library(ggmap)
   
     # Remove rows where 'location' trips up the process for finding coordinates:
     ufo_data = ufo_data[!(location %in% c('', 'coast guard air station salem', 
+                                          'vashon island, washington state', 
                                           'seen from agoura, california, and from aircraft flying over pacific ocean'))]
     
     # Get coordinates for each location:
