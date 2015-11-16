@@ -1,7 +1,12 @@
 # This script contains the server logic for the UFO mapping Shiny app:
 
 # Load needed packages:
+library(data.table)
 library(shiny)
+library(ggmap)
+
+# Load data:
+ufo_data = data.table(read.csv('ufo_data.csv', header = T, stringsAsFactors = F))
 
 # Define server logic:
 shinyServer(function(input, output)
@@ -9,14 +14,6 @@ shinyServer(function(input, output)
   
   # Map object:
   output$plot1 = renderPlot({
-    
-    # This script creates a map plot of UFO sightings in the 20th and 21st centuries in 
-    # the contiguous United States according to the Wikipedia page for reported UFO sightings:
-    # The site used is below:
-    # https://en.wikipedia.org/wiki/List_of_reported_UFO_sightings
-    
-    # Load needed packages:
-    library(ggmap)
     
     #####
     # CREATE MAP:
@@ -51,6 +48,8 @@ shinyServer(function(input, output)
                              col = 'red') + xlab('') + ylab('') + theme(axis.text.y = element_blank(), 
                                                                         axis.text.x = element_blank(), 
                                                                         axis.ticks = element_blank())
+      
+      # View map:
       map
           
                             }
