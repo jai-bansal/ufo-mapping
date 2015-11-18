@@ -21,7 +21,7 @@ shinyUI(fluidPage(
     
     # Map panel:
     mainPanel(h4('Map Panel', align = 'center'), 
-              plotOutput('plot1')
+              plotOutput('plot1', width = 570, height = 700)
              )
                )
   
