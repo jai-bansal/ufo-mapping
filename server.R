@@ -56,7 +56,6 @@ shinyServer(function(input, output)
       # View map:
       map
           
-                            }
-                           )
+                            })
   }
            )
