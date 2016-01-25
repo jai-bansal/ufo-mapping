@@ -6,6 +6,8 @@ library(shiny)
 library(ggmap)
 
 # Load data:
+setwd('..')
+setwd('data_files')
 ufo_data = data.table(read.csv('ufo_data.csv', header = T, stringsAsFactors = F))
 
 # Define server logic:
