@@ -1,8 +1,8 @@
 name: ufo-mapping
 account: jai-bansal
 server: shinyapps.io
-bundleId: 352819
+bundleId: 358376
 url: https://jai-bansal.shinyapps.io/ufo-mapping/
-when: 1453225629.10637
+when: 1453746997.97952
 asMultiple: FALSE
 asStatic: FALSE
