@@ -1,5 +1,5 @@
 #### Synopsis:
-This project is a Shiny app that maps UFO sightings using publicly available data. The app can be found at *https://jai-bansal.shinyapps.io/ufo-mapping*.
+This project is a Shiny app that maps UFO sightings using publicly available data. The app can be found at *https://jai-bansal.shinyapps.io/ufo_mapping*.
 
 #### Motivation:
 This project exists to document some experimentation with web scraping, using the ggmap mapping interface, and building a Shiny app.
